@@ -28,7 +28,7 @@ An addon is data only: pictures plus two JSON files. You do not need to write or
 ### Optional poses (used only if ALL files of that pose exist)
 | Pose | Files | Used for | Without it |
 |---|---|---|---|
-| `crouch` | 8: `{view}_crouch_{mouth}.png` | holding still while scared, a moment after being hit | idle frames |
+| `crouch` | 8: `{view}_crouch_{mouth}.png` | holding still while scared, kneeling for a moment after every hit | idle frames |
 | `crouch-a`, `crouch-b` | 16 | sneaking away from monsters | the crouch frame slides slowly; normal walk if no crouch |
 | `run-a`, `run-b` | 16 | meltdown panic, fleeing a monster that is too close | walk frames played faster |
 
@@ -61,6 +61,7 @@ Example: Amix's canvas is 904 px tall and his eyes are at about row 78, so (904 
 | `voice.categories` | see template | Clip categories (file-name prefix before `__`) for normal talk. |
 | `voice.panicCategories` | `grito,ayuda,aviso` | Shouts during meltdown and when hurt. |
 | `voice.fearCategories` | `ayuda,aviso,grito` | Lines when a monster is near. |
+| `voice.hurtCategories` | `grito,ayuda` | Line on every hit he takes (a panic scream or a call for help), while he kneels. |
 | `sprite.eyeLevel` | 0.912 | See "Measuring eyeLevel". |
 | `sprite.heightCm` | 180 | How tall he looks in game. 180 = eyes level with a player. Kept between 1 and 200. |
 | `poses.crouchChance` | 0 | Chance (0 to 1) to crouch at random when he stops. 0 keeps crouching for fear only. |

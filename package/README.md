@@ -15,7 +15,8 @@ addons you want, for example Amirkhan_NPC (Amix), Dima_NPC, Roma_NPC, Alnur_NPC 
   down after a few seconds.
 - **Meltdown:** when the apparatus is pulled, every pal panics, shouts, runs out of the main entrance and into the
   ship, and rides it when it takes off.
-- **Never hurts anyone. Players walk through him.** He can be killed (6 hits by default) and then lies face-down.
+- **Never hurts anyone. Players walk through him.** Every hit makes him kneel and scream or call for help. He can
+  be killed (6 hits by default) and then lies face-down.
 - **Witness rule:** monsters never kill a pal unseen. Inside the facility they can't hurt him at all. Outside, only
   while a player is within 15 m or has him in sight, and never in the first 10 s.
 - Scannable (red) with his name.

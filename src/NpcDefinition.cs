@@ -27,6 +27,7 @@ namespace PaperPals
         public string categories = "frase,afirmacion,risa,llamada,seguir,aviso,nave,botin,ayuda,nombre,respuesta";
         public string panicCategories = "grito,ayuda,aviso";
         public string fearCategories = "ayuda,aviso,grito";
+        public string hurtCategories = "grito,ayuda"; // panic scream or call for help, on every counted hit
     }
     [Serializable] public class SpriteJson { public float eyeLevel = 0.912f; public float heightCm = 180f; }
     [Serializable] public class PosesJson { public float crouchChance = 0f; }

@@ -521,10 +521,10 @@ namespace PaperPals
             if (IsServer)
             {
                 if (!panicking && currentBehaviourStateIndex != FearRun) { hitPauseUntil = Time.time + 1.5f; StandStill(); }
-                if (enemyHP > 0 && Time.time >= nextHurtShoutAt)
+                if (enemyHP > 0 && Time.time >= nextHurtShoutAt) // every counted hit (0.3 s guard against double hits)
                 {
-                    nextHurtShoutAt = Time.time + 3f;
-                    VoiceClip clip = Def?.Voice.PickPanic();
+                    nextHurtShoutAt = Time.time + 0.3f;
+                    VoiceClip clip = Def?.Voice.PickHurt();
                     if (clip != null) StartCoroutine(Net.SendVoice(NetworkObjectId, float.NaN, 1f, clip));
                 }
             }

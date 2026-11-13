@@ -47,6 +47,7 @@ namespace PaperPals
         public VoiceClip PickNormal() => Pick(def.J.voice.categories);
         public VoiceClip PickPanic() => Pick(def.J.voice.panicCategories);
         public VoiceClip PickFear() => Pick(def.J.voice.fearCategories);
+        public VoiceClip PickHurt() => Pick(def.J.voice.hurtCategories);
 
         /// Clips from the given comma-separated categories (empty = all). No repeats until all were used.
         public VoiceClip Pick(string categories)
