@@ -1,0 +1,27 @@
+{
+  "format": 1,
+  "id": "my_friend",
+  "displayName": "My Friend",
+  "scanSubtext": "Classmate",
+  "voice": {
+    "targetPlayer": "",
+    "categories": "frase,afirmacion,risa,llamada,seguir,aviso,nave,botin,ayuda,nombre,respuesta",
+    "panicCategories": "grito,ayuda,aviso",
+    "fearCategories": "ayuda,aviso,grito"
+  },
+  "sprite": {
+    "eyeLevel": 0.914,
+    "heightCm": 180
+  },
+  "poses": {
+    "crouchChance": 0
+  },
+  "fear": {
+    "enabled": true,
+    "radius": 10,
+    "calmDelay": 3,
+    "runDistance": 4
+  },
+  "stats": { "hp": 6, "walkSpeed": 2.6, "rarity": 25 },
+  "features": { "meltdownPanic": true, "deathScream": true }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "PaperPals",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/ROMANICH09/PaperPals",
+  "description": "Turn your friends into harmless 2D paper cut-out NPCs. A library: install character addons (npc.json + pictures, no code). They wander, talk in their real voices (MirageVoces), hide from monsters and flee a meltdown.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305",
+    "Evaisa-LethalLib-1.2.0"
+  ]
+}

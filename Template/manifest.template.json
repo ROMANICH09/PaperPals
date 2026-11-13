@@ -1,0 +1,9 @@
+{
+  "name": "MyFriend_NPC",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "My Friend as a harmless 2D photo NPC for PaperPals.",
+  "dependencies": [
+    "Luver_Inn-PaperPals-1.0.0"
+  ]
+}

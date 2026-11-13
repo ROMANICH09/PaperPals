@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- dotnet build -c Release                           (build only)
+       dotnet build -c Release -p:InstallToProfile=true    (also copy the DLL into the bb profile for testing) -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>PaperPals</AssemblyName>
+    <RootNamespace>PaperPals</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LCDir Condition="'$(LCDir)' == ''">E:\SteamLibrary\steamapps\common\Lethal Company</LCDir>
+    <Profile Condition="'$(Profile)' == ''">$(AppData)\Thunderstore Mod Manager\DataFolder\LethalCompany\profiles\bb</Profile>
+    <Managed>$(LCDir)\Lethal Company_Data\Managed</Managed>
+    <BepInExCore>$(Profile)\BepInEx\core</BepInExCore>
+    <InstallDir>$(Profile)\BepInEx\plugins\PaperPals_DEV</InstallDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(Managed)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(Managed)\Unity.Netcode.Runtime.dll" Private="false" />
+    <Reference Include="$(Managed)\Unity.Collections.dll" Private="false" />
+    <Reference Include="$(Managed)\Unity.RenderPipelines.HighDefinition.Runtime.dll" Private="false" />
+    <Reference Include="$(Managed)\Unity.RenderPipelines.Core.Runtime.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.AudioModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.AIModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.ImageConversionModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.JSONSerializeModule.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\BepInEx.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\0Harmony.dll" Private="false" />
+    <Reference Include="$(Profile)\BepInEx\plugins\Evaisa-LethalLib\LethalLib\LethalLib.dll" Private="false" />
+  </ItemGroup>
+  <Target Name="InstallToProfile" AfterTargets="Build" Condition="'$(InstallToProfile)' == 'true'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(InstallDir)" />
+    <Message Importance="high" Text="Installed to $(InstallDir)" />
+  </Target>
+</Project>
